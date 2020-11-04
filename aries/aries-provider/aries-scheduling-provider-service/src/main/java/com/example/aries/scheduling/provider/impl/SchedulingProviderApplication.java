@@ -1,4 +1,4 @@
-package com.example.aries.scheduling.provider.service;
+package com.example.aries.scheduling.provider.impl;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
