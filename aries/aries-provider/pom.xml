@@ -12,6 +12,8 @@
     <artifactId>aries-provider</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>aries-provider</name>
+    <packaging>pom</packaging>
+
     <description>生产者项目</description>
 
 
