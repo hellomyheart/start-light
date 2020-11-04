@@ -50,4 +50,10 @@
         </dependency>
     </dependencies>
 
+    <modules>
+        <!--        排班服务-->
+        <module>aries-scheduling-provider-api</module>
+        <module>aries-scheduling-provider-service</module>
+    </modules>
+
 </project>
