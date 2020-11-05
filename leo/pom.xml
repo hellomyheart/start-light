@@ -10,4 +10,14 @@
     <description>狮子座项目</description>
     <packaging>pom</packaging>
 
+    <modules>
+        <!--        依赖管理模块-->
+        <module>leo-dependcies</module>
+        <!--        提供者模块-->
+        <module>leo-provider</module>
+        <module>leo-scheduling-provide</module>
+        <module>leo-dependices</module>
+        <module>leo-provider</module>
+    </modules>
+
 </project>
