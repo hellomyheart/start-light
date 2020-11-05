@@ -6,6 +6,9 @@
     <groupId>com.example</groupId>
     <artifactId>taurus</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <modules>
+        <module>tatrus-provider</module>
+    </modules>
 
     <name>taurus</name>
     <description>金牛座项目</description>
