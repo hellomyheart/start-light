@@ -10,9 +10,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>libra-dependcies</artifactId>
+    <artifactId>libra-dependencies</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>libra-dependcies</name>
+    <name>libra-dependencies</name>
     <description>依赖管理项目，主要用来管理项目依赖(限定版本号)</description>
 
     <properties>
