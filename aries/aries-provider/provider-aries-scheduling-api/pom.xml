@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <!--    父项目是provider项目-->
+    <parent>
+        <artifactId>aries-provider</artifactId>
+        <groupId>com.example</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <groupId>com.example</groupId>
+    <!--    本项目名-->
+    <artifactId>provider-aries-scheduling-api</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>provider-aries-scheduling-api</name>
+    <packaging>jar</packaging>
+
+    <description>排班服务提供者api,主要放接口和实体类</description>
+
+
+    <dependencies>
+        <!--    依赖暂时不需要，因为已继承父项目（provider的依赖）有需要了再添加-->
+    </dependencies>
+
+    <!--    这个项目没有子项目，所以没有module-->
+
+</project>

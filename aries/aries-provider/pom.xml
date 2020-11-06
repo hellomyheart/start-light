@@ -48,7 +48,7 @@
 
     <modules>
         <!--       排班服务提供者api-->
-        <module>provider-aries-scheduling--api</module>
+        <module>provider-aries-scheduling-api</module>
     </modules>
 
 </project>
