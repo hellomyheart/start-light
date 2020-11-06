@@ -20,8 +20,8 @@
 
 ​	返回 int
 
-### 前端参数
-    addFavorite:FavoriteAddDto dto(uid,cid)
+### 3.s前端参数
+    addFavorite:FavoriteAddDto dto(uid,cid,tital)
     
     queryByUid:uid
 
