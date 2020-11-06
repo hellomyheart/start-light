@@ -66,13 +66,69 @@ provider项目中添加刚才创建的api项目
 
 刚才写的api模块是根模块的孙子模块。（子模块的子模块）
 
-
-
 检查完毕没问题。
 
 第一个视频结束。
 
 ## 6.修改/编写service
+
+这个视频编写service模块，以及使用代码生成器完成代码生成。
+
+### 6.1编写service模块
+
+创建service模块名，在provider模块内创建
+
+在你们自己provider的下面
+
+创建文件夹，格式：provider-星座名-服务名-service,
+
+创建pom.xml（在刚才创建的文件夹内）
+
+项目名多了一个-，修改。
+
+改文件夹名和pom中的项目名。
+
+### 6.2在provider模块中添加刚才创建的service模块
+
+
+
+### 6.3创建数据库、数据表
+
+生成代码需要把数据表导入到数据库中。
+
+创建自己的数据库
+
+创建完成
+
+### 6.4完善api、service模块
+
+主要是创建java文件夹和resource文件夹
+
+src/main/java和src/main/resources
+
+然后标记文件夹
+
+就像刚才。
+
+SourcesRoot
+
+和
+
+ResourcesRoot
+
+service模块也一样
+
+完成。
+
+
+
+```
+scheduling
+```
+
+
+
+
 
 ## 7.准备编写consumer(消费者)
 
