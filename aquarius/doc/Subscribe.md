@@ -40,5 +40,26 @@
 
 返回是或否
 
+#### 3.设计
+
+数据库设计
+
+预约表： 预约客户名单 ，预约状态，手机号，预约时间
+
+预约详情表：
+
+``` sql
+--预约表
+create table t_subscribe(
+id int primary key auto_increment ,
+sname varchar(20),
+phone varchar(20),   
+flag int comment  '预约状态：0 未到 1 已到',
+ctime datetime ,
+utime datetime
+);
+
+```
+
 
 
