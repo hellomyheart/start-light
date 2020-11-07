@@ -11,12 +11,8 @@
     <packaging>pom</packaging>
 
     <modules>
-
-        <module>aquarlus-dependcies</module>
-
-        <module>aquarlus-provider</module>
-        <module>aquarIus-provider/aquarIus-subscribe-provider-service</module>
-
+        <module>aquarius-dependcies</module>
+        <module>aquarius-provider</module>
     </modules>
 
 </project>

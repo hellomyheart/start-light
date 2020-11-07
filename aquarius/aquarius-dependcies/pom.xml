@@ -10,9 +10,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>aquarlus-dependcies</artifactId>
+    <artifactId>aquarius-dependcies</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>aquarlus-dependcies</name>
+    <name>aquarius-dependcies</name>
     <description>依赖管理项目，主要用来管理项目依赖(限定版本号)</description>
 
     <properties>
@@ -24,6 +24,7 @@
         <sentinel.version>2.2.1.RELEASE</sentinel.version>
         <spring.boot.version>2.3.5.RELEASE</spring.boot.version>
         <spring-cloud.version>Hoxton.SR8</spring-cloud.version>
+        <lombok.version>1.18.16</lombok.version>
     </properties>
 
     <!--    管理项目依赖 限定版本号-->
@@ -50,6 +51,11 @@
                 <scope>import</scope>
             </dependency>
 
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
 
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
