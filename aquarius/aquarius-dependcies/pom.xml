@@ -10,9 +10,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>aquarlus-dependcies</artifactId>
+    <artifactId>aquarius-dependcies</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>aquarlus-dependcies</name>
+    <name>aquarius-dependcies</name>
     <description>依赖管理项目，主要用来管理项目依赖(限定版本号)</description>
 
     <properties>

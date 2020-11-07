@@ -10,4 +10,9 @@
     <description>水瓶座项目</description>
     <packaging>pom</packaging>
 
+    <modules>
+        <module>aquarius-dependcies</module>
+        <module>aquarius-provider</module>
+    </modules>
+
 </project>
