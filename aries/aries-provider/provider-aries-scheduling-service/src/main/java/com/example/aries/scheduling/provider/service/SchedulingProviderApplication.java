@@ -1,5 +1,6 @@
 package com.example.aries.scheduling.provider.service;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -17,6 +18,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 //开启事务注解
 @EnableTransactionManagement
 @SpringBootApplication
+@MapperScan(basePackages = "com.example.aries.scheduling.provider.service.mapper")
 public class SchedulingProviderApplication {
     public static void main(String[] args) {
         SpringApplication.run(SchedulingProviderApplication.class,args);
