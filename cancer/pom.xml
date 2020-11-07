@@ -7,6 +7,10 @@
     <groupId>org.example</groupId>
     <artifactId>canner</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <modules>
+        <module>cancer-dependcies</module>
+        <module>cancer-provider</module>
+    </modules>
     <name>cancer</name>
     <description>巨蟹座项目</description>
     <packaging>pom</packaging>
