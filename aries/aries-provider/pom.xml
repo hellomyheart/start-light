@@ -40,6 +40,11 @@
         </dependency>
 
         <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.16</version>
+        </dependency>
+        <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
             <version>2.2.1.RELEASE</version>
@@ -47,9 +52,10 @@
     </dependencies>
 
     <modules>
-        <!--        排班服务-->
-        <module>aries-scheduling-provider-api</module>
-        <module>aries-scheduling-provider-service</module>
+        <!--       排班服务提供者api-->
+        <module>provider-aries-scheduling-api</module>
+        <!--        排班服务提供者service-->
+        <module>provider-aries-scheduling-service</module>
     </modules>
 
 </project>
