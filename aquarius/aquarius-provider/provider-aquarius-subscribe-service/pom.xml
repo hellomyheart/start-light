@@ -18,11 +18,12 @@
 
 
     <dependencies>
+        <dependency>
+            <groupId>com.example</groupId>
+            <artifactId>provider-aquarius-subscribe-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
-
-    <modules>
-        <module>../provider-aquarius-subscribe-api</module>
-
-    </modules>
 
 </project>
