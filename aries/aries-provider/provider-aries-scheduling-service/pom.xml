@@ -20,6 +20,13 @@
 
     <dependencies>
         <!--    依赖暂时不需要，因为已继承父项目（provider的依赖）有需要了再添加-->
+
+        <dependency>
+            <groupId>com.example</groupId>
+            <artifactId>provider-aries-scheduling-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
     </dependencies>
 
     <!--    这个项目没有子项目，所以没有module-->

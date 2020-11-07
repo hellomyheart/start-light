@@ -120,15 +120,105 @@ service模块也一样
 
 完成。
 
+现在，创建包
 
+com.example.项目名.模块名.provider.api
+
+例如：
+
+com.example.aries.scheduling.provider.api
+
+com.example.aries.scheduling.provider.service
+
+下一步创建开关类（service创建、api只有接口和domain）
+
+开关类名：模块名ProviderApplication
+
+例如：SchedulingProviderApplication
+
+再加上nacos注解、事务注解
+
+下面就是创建子包
+
+api模块创建service和domain包（domain类似于entity）
+
+service模块创建mapper、impl、
+
+下一步就是代码生成
+
+
+
+一步步选择
+
+先选实体类的模块
+
+api模块下的src/main/java
+
+然后选择包
+
+
+
+后面同理，选择mapper的项目路径
+
+再选择mapper的包
+
+
+
+然后就是选择mapper.xml的存放路径
+
+选中service模块的resources文件夹
+
+然后mapper文件夹名写mapper(之前没有创建，他会自动生成)
+
+
+
+后面就是常见的注解
+
+
+
+先选service接口的模块位置
+
+选api
+
+再选包
+
+
+
+再选service实现类的模块和包名
+
+这时候基本没问题了，需要使用mybatisplus可以勾选mybatisplus3,自己选，这里我没有勾（当初的依赖没有加入mp,如果想使用，勾上后，把依赖加上）
+
+没问题了，点ok
+
+
+
+现在看报错内容，是service模块里无法识别api模块的java代码
+
+现在把api模块依赖到service模块，就像项目需要spring依赖一样。
 
 ```
 scheduling
 ```
 
+service模块添加依赖（api模块）
+
+这里报错是因为忘记加swagger依赖了。provider模块没有controller，不需要添加swagger,可以删除代码，也可以重新生成。
+
+取消勾选swagger
+
+重新生成
+
+没有lombok依赖。
+
+provider模块添加
+
+基本完成，结合自己的业务，删除或者修改自己的service。
 
 
 
+
+
+至此v1的基本代码写完，开始写业务。
 
 ## 7.准备编写consumer(消费者)
 
