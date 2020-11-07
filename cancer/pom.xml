@@ -8,10 +8,8 @@
     <artifactId>canner</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <modules>
+        <module>cancer-dependcies</module>
         <module>cancer-provider</module>
-        <module>A</module>
-        <module>cancer-order-provider-service</module>
-        <module>cancer-order-provider-api</module>
     </modules>
     <name>cancer</name>
     <description>巨蟹座项目</description>

@@ -3,13 +3,32 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>canner</artifactId>
+        <artifactId>cancer-provider</artifactId>
         <groupId>org.example</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>provider-aries-scheduling-api</name>
+    <packaging>jar</packaging>
+
+    <description>订单服务提供者api,主要放接口和实体类</description>
+    <groupId>com.example</groupId>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>cancer-order-provider-api</artifactId>
-
+    <dependencies>
+        <dependency>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcprov-jdk15on</artifactId>
+            <version>1.64</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.16</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 
 </project>
