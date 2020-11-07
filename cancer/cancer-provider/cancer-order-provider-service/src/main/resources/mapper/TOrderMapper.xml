@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.cancer.order.provider.service.mapper.TOrderMapper">
+  <resultMap id="BaseResultMap" type="com.example.cancer.order.provider.api.domain.TOrder">
+    <!--@mbg.generated-->
+    <!--@Table t_order-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="uid" jdbcType="INTEGER" property="uid" />
+    <result column="aid" jdbcType="INTEGER" property="aid" />
+    <result column="totalmoney" jdbcType="DOUBLE" property="totalmoney" />
+    <result column="freemoney" jdbcType="DOUBLE" property="freemoney" />
+    <result column="paymoney" jdbcType="DOUBLE" property="paymoney" />
+    <result column="paytype" jdbcType="INTEGER" property="paytype" />
+    <result column="ctime" jdbcType="TIMESTAMP" property="ctime" />
+    <result column="update" jdbcType="TIMESTAMP" property="update" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, `uid`, aid, totalmoney, freemoney, paymoney, paytype, ctime, `update`
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from t_order
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <!--@mbg.generated-->
+    delete from t_order
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.example.cancer.order.provider.api.domain.TOrder" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into t_order (`uid`, aid, totalmoney, 
+      freemoney, paymoney, paytype, 
+      ctime, `update`)
+    values (#{uid,jdbcType=INTEGER}, #{aid,jdbcType=INTEGER}, #{totalmoney,jdbcType=DOUBLE}, 
+      #{freemoney,jdbcType=DOUBLE}, #{paymoney,jdbcType=DOUBLE}, #{paytype,jdbcType=INTEGER}, 
+      #{ctime,jdbcType=TIMESTAMP}, #{update,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.example.cancer.order.provider.api.domain.TOrder" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into t_order
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="uid != null">
+        `uid`,
+      </if>
+      <if test="aid != null">
+        aid,
+      </if>
+      <if test="totalmoney != null">
+        totalmoney,
+      </if>
+      <if test="freemoney != null">
+        freemoney,
+      </if>
+      <if test="paymoney != null">
+        paymoney,
+      </if>
+      <if test="paytype != null">
+        paytype,
+      </if>
+      <if test="ctime != null">
+        ctime,
+      </if>
+      <if test="update != null">
+        `update`,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="uid != null">
+        #{uid,jdbcType=INTEGER},
+      </if>
+      <if test="aid != null">
+        #{aid,jdbcType=INTEGER},
+      </if>
+      <if test="totalmoney != null">
+        #{totalmoney,jdbcType=DOUBLE},
+      </if>
+      <if test="freemoney != null">
+        #{freemoney,jdbcType=DOUBLE},
+      </if>
+      <if test="paymoney != null">
+        #{paymoney,jdbcType=DOUBLE},
+      </if>
+      <if test="paytype != null">
+        #{paytype,jdbcType=INTEGER},
+      </if>
+      <if test="ctime != null">
+        #{ctime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="update != null">
+        #{update,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.cancer.order.provider.api.domain.TOrder">
+    <!--@mbg.generated-->
+    update t_order
+    <set>
+      <if test="uid != null">
+        `uid` = #{uid,jdbcType=INTEGER},
+      </if>
+      <if test="aid != null">
+        aid = #{aid,jdbcType=INTEGER},
+      </if>
+      <if test="totalmoney != null">
+        totalmoney = #{totalmoney,jdbcType=DOUBLE},
+      </if>
+      <if test="freemoney != null">
+        freemoney = #{freemoney,jdbcType=DOUBLE},
+      </if>
+      <if test="paymoney != null">
+        paymoney = #{paymoney,jdbcType=DOUBLE},
+      </if>
+      <if test="paytype != null">
+        paytype = #{paytype,jdbcType=INTEGER},
+      </if>
+      <if test="ctime != null">
+        ctime = #{ctime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="update != null">
+        `update` = #{update,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.cancer.order.provider.api.domain.TOrder">
+    <!--@mbg.generated-->
+    update t_order
+    set `uid` = #{uid,jdbcType=INTEGER},
+      aid = #{aid,jdbcType=INTEGER},
+      totalmoney = #{totalmoney,jdbcType=DOUBLE},
+      freemoney = #{freemoney,jdbcType=DOUBLE},
+      paymoney = #{paymoney,jdbcType=DOUBLE},
+      paytype = #{paytype,jdbcType=INTEGER},
+      ctime = #{ctime,jdbcType=TIMESTAMP},
+      `update` = #{update,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

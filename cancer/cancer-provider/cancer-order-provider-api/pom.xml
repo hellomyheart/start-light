@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>cancer-provider</artifactId>
-        <groupId>org.example</groupId>
+        <groupId>com.example</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <version>0.0.1-SNAPSHOT</version>
@@ -18,16 +18,8 @@
     <artifactId>cancer-order-provider-api</artifactId>
     <dependencies>
         <dependency>
-            <groupId>org.bouncycastle</groupId>
-            <artifactId>bcprov-jdk15on</artifactId>
-            <version>1.64</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.16</version>
-            <scope>compile</scope>
         </dependency>
     </dependencies>
 

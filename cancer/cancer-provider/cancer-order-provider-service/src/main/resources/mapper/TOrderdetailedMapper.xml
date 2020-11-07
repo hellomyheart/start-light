@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.cancer.order.provider.service.mapper.TOrderdetailedMapper">
+  <resultMap id="BaseResultMap" type="com.example.cancer.order.provider.api.domain.TOrderdetailed">
+    <!--@mbg.generated-->
+    <!--@Table t_orderdetailed-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="skuid" jdbcType="INTEGER" property="skuid" />
+    <result column="count" jdbcType="INTEGER" property="count" />
+    <result column="price" jdbcType="DOUBLE" property="price" />
+    <result column="ctime" jdbcType="TIMESTAMP" property="ctime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, skuid, `count`, price, ctime
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from t_orderdetailed
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <!--@mbg.generated-->
+    delete from t_orderdetailed
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.example.cancer.order.provider.api.domain.TOrderdetailed" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into t_orderdetailed (skuid, `count`, price, 
+      ctime)
+    values (#{skuid,jdbcType=INTEGER}, #{count,jdbcType=INTEGER}, #{price,jdbcType=DOUBLE}, 
+      #{ctime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.example.cancer.order.provider.api.domain.TOrderdetailed" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into t_orderdetailed
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="skuid != null">
+        skuid,
+      </if>
+      <if test="count != null">
+        `count`,
+      </if>
+      <if test="price != null">
+        price,
+      </if>
+      <if test="ctime != null">
+        ctime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="skuid != null">
+        #{skuid,jdbcType=INTEGER},
+      </if>
+      <if test="count != null">
+        #{count,jdbcType=INTEGER},
+      </if>
+      <if test="price != null">
+        #{price,jdbcType=DOUBLE},
+      </if>
+      <if test="ctime != null">
+        #{ctime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.cancer.order.provider.api.domain.TOrderdetailed">
+    <!--@mbg.generated-->
+    update t_orderdetailed
+    <set>
+      <if test="skuid != null">
+        skuid = #{skuid,jdbcType=INTEGER},
+      </if>
+      <if test="count != null">
+        `count` = #{count,jdbcType=INTEGER},
+      </if>
+      <if test="price != null">
+        price = #{price,jdbcType=DOUBLE},
+      </if>
+      <if test="ctime != null">
+        ctime = #{ctime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.cancer.order.provider.api.domain.TOrderdetailed">
+    <!--@mbg.generated-->
+    update t_orderdetailed
+    set skuid = #{skuid,jdbcType=INTEGER},
+      `count` = #{count,jdbcType=INTEGER},
+      price = #{price,jdbcType=DOUBLE},
+      ctime = #{ctime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
