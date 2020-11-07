@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.aries.scheduling.provider.service.mapper.SchedulingMapper">
+  <resultMap id="BaseResultMap" type="com.example.aries.scheduling.provider.api.domain.Scheduling">
+    <!--@mbg.generated-->
+    <!--@Table scheduling.scheduling-->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="sp_id" jdbcType="BIGINT" property="spId" />
+    <result column="e_id" jdbcType="BIGINT" property="eId" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="spheduling_time" jdbcType="DATE" property="sphedulingTime" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, sp_id, e_id, `status`, spheduling_time, create_time, update_time
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from scheduling.scheduling
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    <!--@mbg.generated-->
+    delete from scheduling.scheduling
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.example.aries.scheduling.provider.api.domain.Scheduling">
+    <!--@mbg.generated-->
+    insert into scheduling.scheduling (id, sp_id, e_id, `status`, 
+      spheduling_time, create_time, update_time
+      )
+    values (#{id,jdbcType=BIGINT}, #{spId,jdbcType=BIGINT}, #{eId,jdbcType=BIGINT}, #{status,jdbcType=INTEGER}, 
+      #{sphedulingTime,jdbcType=DATE}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.aries.scheduling.provider.api.domain.Scheduling">
+    <!--@mbg.generated-->
+    insert into scheduling.scheduling
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="spId != null">
+        sp_id,
+      </if>
+      <if test="eId != null">
+        e_id,
+      </if>
+      <if test="status != null">
+        `status`,
+      </if>
+      <if test="sphedulingTime != null">
+        spheduling_time,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="spId != null">
+        #{spId,jdbcType=BIGINT},
+      </if>
+      <if test="eId != null">
+        #{eId,jdbcType=BIGINT},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="sphedulingTime != null">
+        #{sphedulingTime,jdbcType=DATE},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.aries.scheduling.provider.api.domain.Scheduling">
+    <!--@mbg.generated-->
+    update scheduling.scheduling
+    <set>
+      <if test="spId != null">
+        sp_id = #{spId,jdbcType=BIGINT},
+      </if>
+      <if test="eId != null">
+        e_id = #{eId,jdbcType=BIGINT},
+      </if>
+      <if test="status != null">
+        `status` = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="sphedulingTime != null">
+        spheduling_time = #{sphedulingTime,jdbcType=DATE},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.aries.scheduling.provider.api.domain.Scheduling">
+    <!--@mbg.generated-->
+    update scheduling.scheduling
+    set sp_id = #{spId,jdbcType=BIGINT},
+      e_id = #{eId,jdbcType=BIGINT},
+      `status` = #{status,jdbcType=INTEGER},
+      spheduling_time = #{sphedulingTime,jdbcType=DATE},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>
