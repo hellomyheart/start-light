@@ -4,9 +4,16 @@
     <modelVersion>4.0.0</modelVersion>
     <!--    父项目是项目依赖项目-->
     <parent>
-        <artifactId>aquarius</artifactId>
+        <artifactId>aquarius-provider</artifactId>
         <groupId>com.example</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
+    <groupId>com.example</groupId>
+    <artifactId>aquarius-subscribe-provider-api</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>aquarius-provider</name>
+    <packaging>pom</packaging>
+
+    <description>生产者项目</description>
 
 </project>
